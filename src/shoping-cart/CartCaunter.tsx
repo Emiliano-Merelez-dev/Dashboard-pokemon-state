@@ -27,16 +27,17 @@ export const CartCaunter = ({ value = 0 }: Props) => {
   const count = useAppSelector( state => state.counter.count );
   const dispatch = useAppDispatch();
   // const [count, setCount] = useState(value);
-
+  
   // useEffect(() => {
-  //   dispatch(initCounterState(value) );  
+    //   dispatch(initCounterState(value) );  
     
-  // }, [dispatch, value])
-
-  useEffect(() => {
-    getApiCounter()
-    .then( ({count}) => dispatch(initCounterState(count) ) );
-
+    // }, [dispatch, value])
+    
+    useEffect(() => {
+      getApiCounter()
+      .then( ({count}) => dispatch(initCounterState(count) ) );
+      // para que funcione el counter
+      
   }, [dispatch])
   
 
